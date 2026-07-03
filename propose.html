@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>For You</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header> 
+            <!-- <a href="story.html" class="btn-story">Наша история</a> -->
+        </header>
+
+        <main>
+            <div class="image1">
+                <img src="gifcat.gif">
+            </div>
+            <div class="text">
+                <h2>Я хочу предложить тебе</h2>
+                <h1>Согласна ли ты создать наши новые общие воспоминания?</h1>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-yes" id="yesBtn" onclick="window.location.href='album.html'">ДА</button>
+                <button class="btn btn-no" id="noBtn" onclick="moveButton(this)">НЕТ</button>
+            </div>
+        </main>
+
+        <script>
+            function moveButton(button) {
+                var maxX = window.innerWidth - button.offsetWidth - 20;
+                var maxY = window.innerHeight - button.offsetHeight - 20;
+                
+                // Защита от отрицательных значений
+                if (maxX < 0) maxX = 0;
+                if (maxY < 0) maxY = 0;
+
+                var x = Math.random() * maxX;
+                var y = Math.random() * maxY;
+                
+                button.style.position = 'fixed';
+                button.style.left = x + 'px';
+                button.style.top = y + 'px';
+            }
+        </script>
+
+        <footer>
+            <a href="index.html" class="back-btn">Назад</a>
+        </footer>
+    </body>
+    
+    
+    
+</html>

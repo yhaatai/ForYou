@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+body {
+    background: pink;
+    margin: 0;                    /* убираем отступы */
+    min-height: 100vh;            /* высота на весь экран */
+    display: flex;
+    flex-direction: column;       /* чтобы header, main, footer были в колонку */
+    font-family: 'Comfortaa', sans-serif;
+}
+
+main {
+    flex: 1;                      /* занимает всё свободное место */
+    display: flex;
+    flex-direction: column;       /* располагаем вертикально (колонкой) */
+    justify-content: center;      /* центрируем по горизонтали */
+    align-items: center;          /* центрируем по вертикали */
+}
+/* блок с гифкой */
+.image1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.image1 img {
+    width: 100%;          /* на всю ширину родителя */
+    height: 100%;         /* на всю высоту родителя */
+    object-fit: cover;    /* чтобы картинка заполнила квадрат */
+}
+
+/* блок с девушкой */
+.text {
+    text-align: center;
+    margin-top: 20px;     
+    color: white;
+    margin: 0;
+}
+
+.text h2 {
+    font-size: 18px;      /* ← размер второго заголовка (было 24px по умолчанию) */
+    font-weight: 400;      /* нормальная жирность, можно поставить 300 для тонкого */
+    margin-bottom: 15px;   /* отступ снизу, чтобы не слипалось с h1 */
+}
+
+.text h1 {
+    font-size: 28px;      /* ← размер главного заголовка (было ~32-36px по умолчанию) */
+    font-weight: 500;      /* полужирный, можно 600 */
+}
+
+/* конпки да/нет */
+.buttons {
+    margin-top: 30px;
+    position: relative;
+}
+
+.btn {
+    font-weight: bold;  /* жиронсть*/
+    padding: 12px 35px;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0 10px;
+}
+
+.btn-yes {
+    background: white;
+    color: #fda9ba;
+}
+
+.btn-no {
+    background: #fda9ba;
+    color: white;
+    position: relative;
+}
+
+
+/*назад*/
+footer {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.back-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.6);
+    color: #c45a7a;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    transform: scale(1.02);
+}
